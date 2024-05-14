@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Recommender</title>
+    <style>
+            /* General page styling */
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #99a65f;
+    color: #333;
+    line-height: 1.6;
+    }
+
+    /* Header styling */
+    header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    }
+
+    /* Project summary section */
+    .project-summary {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    }
+
+    /* Personal reflection section */
+    .personal-reflection {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #e7e7e7;
+    border-left: 4px solid #333;
+    }
+
+    /* Button styling */
+    button {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    }
+
+    button:hover {
+    background: #555;
+    }
+
+    /* Footer styling */
+    footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    }
+    </style>
+</head>
+<body>
+    <h1>Music Recommender</h1>
+    <form id="preferencesForm">
+        <label for="genres">Favorite Genres:</label><br>
+        <input type="text" id="genres" name="genres"><br>
+        <label for="artists">Favorite Artists:</label><br>
+        <input type="text" id="artists" name="artists"><br>
+        <label for="songs">Favorite Songs:</label><br>
+        <input type="text" id="songs" name="songs"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="recommendations">
+        <!-- Recommendations will be inserted here -->
+    </div>
+    <script>
+        document.getElementById('preferencesForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var genres = document.getElementById('genres').value;
+            var artists = document.getElementById('artists').value;
+            var songs = document.getElementById('songs').value;
+            // Send this data to your backend and get the recommendations
+            // Then display the recommendations in the 'recommendations' div
+        });
+    </script>
+</body>
+</html>
